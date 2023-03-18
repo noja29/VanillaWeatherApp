@@ -44,8 +44,10 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.main.wind);
   dateElement.innerHTML = "Friday 5:00";
 }
+let city = "New York";
 
-let apiKey = "73fo054d9ae81a22f93cdbtb4a8b9610";
+let apiKey = "b0b41c48cd830cf4e2d1ded6332ea8db";
+
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
